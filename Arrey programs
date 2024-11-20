@@ -1,0 +1,17 @@
+# c.programming
+//write the c program to calculate  the sum of the elements in the arrey 
+#include <stdio.h>
+  void main ()
+{
+int i,c=0,n,a[i];
+   printf("enter the number of elements in the arrey :");
+   scanf("%d",&n);
+     for (i=0;i<n;i++)
+     {
+        printf("\n enter the valu of a[%d]:",i);
+         scanf("%d",&a[i]);
+         c=c+a[i];
+      }  
+        printf("\n sum of the arrey is :%d ",c);
+  }
+
