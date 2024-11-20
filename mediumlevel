@@ -1,0 +1,23 @@
+// BMT calculation
+#include<stdio.h> 
+int main ()
+{
+float w, bmi,h; 
+printf ("Enter your hight:");
+scanf ("%f",&w);
+printf ("Enter your hight:");
+scanf("%f",&h); 
+bmi=w/(h*h);
+printf (" bmi value is %f" ,bmi);
+return 0;
+}
+**********************************************************************
+output 
+Enter your hight :6
+
+Enter your weight:2
+
+ sum of the arrey is :1.500000
+
+
+**********************************************************************
