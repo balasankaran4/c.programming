@@ -1,4 +1,51 @@
-# c.programming
+//saperate odd or even integeras in saperate array 
+#include <stdio.h>
+   int  main()
+  { 
+    int n,i,arr[i];
+    printf("get n:");    
+    scanf("%d",&n);
+          for (i=0;i<n;i++) 
+          {   
+               printf("enter arr[%d]:",i);
+               scanf("%d",&arr[i]); 
+           } printf("\nThe even numbers :");
+              for (i=0;i<=n;i++)
+                 { 
+                     if (arr[i]%2==0) 
+                       {
+                           int even;
+                             arr[even]=arr[i];
+                              printf("%d   ",arr[even]);
+                       } 
+                       
+                  }
+                  printf("\nThe odd numbers:");
+                  for (i=0;i<=n;i++)
+                 { 
+                     if (arr[i]%2!=0) 
+                       {
+                           int odd;
+                             arr[odd]=arr[i];
+                              printf("%d  ",arr[odd]);
+                       } 
+                       
+                  }
+     return 0;
+  }
+**********************************************************************
+output:
+     get n:5
+     enter arr[0]:2
+     enter arr[1]:3
+     enter arr[2]:4
+     enter arr[3]:5
+     enter arr[4]:6
+
+     The even numbers :2   4   6 
+     The odd numbers:3  5
+
+**********************************************************************
 //write the c program to calculate  the sum of the elements in the arrey 
 #include <stdio.h>
   void main ()
