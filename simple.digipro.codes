@@ -1,3 +1,27 @@
+// area and circumference 
+#include<stdio.h>
+int main()
+{
+    int r;
+    float a,c,p=3.14;
+     printf("\n Enter the radius of a circle:");
+     scanf("%d",&r);
+   {
+    a=p*r*r;
+    c=2*p*r;
+      printf("Area of a circle:%f\n",a);
+      printf("Circumference of a circle:%f\n",c);
+   }
+   return 0;
+}
+--------------------------------------------------------------------------------------
+output:
+  
+ Enter the radius of a circle:5
+ Area of a circle:78.500000
+ Circumference of a circle:31.400002
+--------------------------------------------------------------------------------------
+
 //5*5 pattern code
 #include<stdio.h>
   
