@@ -1,3 +1,29 @@
+// the number has been even or odd
+  #include<stdio.h>
+  
+      int main()
+  {
+      int x;
+    
+          printf("enter the number: ");
+          scanf("%d",&x);
+    
+     if (x%2==0)
+     {
+         printf("\n given number is even ");
+     }
+     else
+     {
+         printf("\n given  number is odd"); 
+     }    
+      return 0;
+  }   
+--------------------------------------------------------------------------------------
+output:
+  enter the number: 133469
+ given  number is odd
+--------------------------------------------------------------------------------------
+
 // if you eligible for vote or not
   #include<stdio.h>
   
