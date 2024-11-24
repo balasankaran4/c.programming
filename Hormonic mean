@@ -1,0 +1,39 @@
+// find the hormonic mean 
+  #include<stdio.h>
+  int main()
+  {
+   int N;
+   int num;
+   float c=0;
+   printf("Enter the number of datas:");
+   scanf("%d",&N);
+   
+   for(int i=1;i<=N;i++)
+   {
+     printf("\nEnter the datas:");
+     scanf("%d",&num);
+     num= 1/num;
+     c=c+num;
+    
+   }
+   float mean = N/c;
+   
+    printf("\nhormonic mean= %f",mean);
+  return 0;
+}
+--------------------------------------------------------------------------------------------------------------------
+  output:
+    
+--------------------------------------------------------------------------------------------------------------------
+  
+
+
+
+
+
+
+
+
+
+
+
