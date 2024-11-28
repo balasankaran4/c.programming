@@ -1,0 +1,144 @@
+-----------------------------------------------------
+Length of the string Without using strlen function
+-----------------------------------------------------
+Coding:
+#include <stdio.h>
+void main()
+{
+ int cou=0;
+ char str[10];
+ printf("Enter the string to calculate the length ");
+ scanf("%s",&str);
+ for(int i=0;str[i]!='\0';i++)
+ {
+     cou++;
+ }
+ printf("The length of the string is %d",cou);
+}
+----------------------------------------------------------
+Output:
+Enter the string to calculate the length ksrct
+The length of the string is 5
+------------------------------------------------------------------
+Catenation of two string Without using strlen function
+-----------------------------------------------------------------------
+Coding:
+#include <stdio.h>
+void main()
+{
+ 
+ char str1[100];
+ char str2[100];
+ printf("Enter the string First string  ");
+ scanf("%s",str1);
+ printf("Enter the string Second string  ");
+ scanf("%s",str2);
+ int i=0,j=0;
+ while(str1[i]!='\0')
+    i++;
+    while(str2[j]!='\0')
+    {
+     str1[i]=str2[j];
+     i++;
+     j++;
+    }
+    str1[i]='\0';
+ 
+ 
+ printf("Concatenated String is %s",str1);
+}
+--------------------------------------------------------------
+Output:
+Enter the string First string  Naveen
+Enter the string Second string  kumar
+Concatenated String is Naveenkumar
+---------------------------------------------------------------
+Copy one string to another string Without using strcpy function
+---------------------------------------------------------------
+Coding:
+#include <stdio.h>
+void main()
+{
+ 
+ char str1[100];
+ char str2[100];
+ printf("Enter the string string  ");
+ scanf("%s",str1);
+ int i=0,j=0;
+while(str1[i]!='\0'){
+    str2[j++]=str1[i];
+    i++;
+}
+str2[j]='\0';
+ printf("The value changed in next array is %s",str2);
+}
+------------------------------------------------------------------
+Output:
+Enter the string string  ksrct
+The value changed in next array is ksrct
+------------------------------------------------------------------
+Comaring two String Without using strcmp function
+--------------------------------------------------------------------
+Coding:
+#include <stdio.h>
+void main()
+{
+ 
+ char str1[100];
+ char str2[100];
+ printf("Enter the string First string  ");
+ scanf("%s",str1);
+ printf("Enter the string Second string  ");
+ scanf("%s",str2);
+ int i=0,flag=0;
+ while(str1[i]!='\0'&&str2[i]!='\0')
+    {
+        if(str1[i]!=str2[i])
+        {
+            flag=1;
+            break;
+        }
+        i++;
+    }
+    if(flag==0)
+    printf("Strings are same");
+    else
+    printf("Strings are not same");
+}
+--------------------------------------------------------
+Output1:
+Enter the string First string  ksrct
+Enter the string Second string  ksrct
+Strings are same
+Output2:
+Enter the string First string  ksrct
+Enter the string Second string  ksrce
+Strings are not same
+---------------------------------------------------------
+Reverse of the string
+----------------------------------------------------------
+#include <stdio.h>
+#include<string.h>
+void main()
+{
+ 
+ char str[100];
+ int i=0,temp;
+ printf("Enter the string  ");
+ scanf("%s",str);
+ int j=strlen(str)-1;
+ while(i<j)
+    {
+        temp=str[i];
+        str[i]=str[j];
+        str[j]=temp;
+        i++,j--;
+    }
+    printf("The reverse of the Strings is %s",str);
+    
+}
+------------------------------------------------------------
+Output:
+Enter the string  ksrct
+The reverse of the Strings is tcrsk
+------------------------------------------------------------
