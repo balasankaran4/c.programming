@@ -1,3 +1,4 @@
+//structure in function
 #include <stdio.h>
  struct date {
      int roll;
@@ -20,4 +21,44 @@ Name:Balasankaran
 
 === Code Exited With Errors ===
 ----------------------------------------------------------------------------------------------------
+// structure with in the structure 
+#include <stdio.h>
+ struct student
+  {
+     int roll;
+     char name[100];
+     struct dob_student
+   {
+        int date,year;
+        char mon[4];
+    }m;
+   }s;
+ void main()
+ {
+  printf("Enter roll no:");
+  scanf ("%d",& s.roll);
+  printf("Enter name:");
+  scanf("%s",&s.name);
+  printf("Enter date of you birth:");
+  scanf ("%d",&s.m.date);
+  printf("Enter month of you birth:");
+  scanf ("%s",&s.m.mon);
+  printf("Enter year of you birth:");
+  scanf ("%d",&s.m.year);
+  printf("\nRoll:%d\nName:%s",s.roll,s.name);
+  printf("\ndate of birth day : %s,%d,%d",s.m.mon,s.m.date,s.m.year); 
+ }
+---------------------------------------------------------------------------------------------------------------
+Enter roll no:0
+Enter name:balasankaran
+Enter date of you birth:4
+Enter month of you birth:oct
+Enter year of you birth:2007
+
+Roll:0
+Name:balasankaran
+date of birth day : oct,4,2007
+
+=== Code Exited With Errors ===
+---------------------------------------------------------------------------------------------------------------
 
