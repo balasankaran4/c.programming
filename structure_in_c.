@@ -1,1 +1,23 @@
+#include <stdio.h>
+ struct date {
+     int roll;
+     char name[100];
+ }s;
+ void main()
+ {
+  printf("Enter");
+  scanf ("%d %s",&s.roll,&s.name);
+  
+  printf("\nRoll:%d\nName:%s",s.roll,s.name);
+ }
+----------------------------------------------------------------------------------------------------
+output:
+Enter6
+Balasankaran
+
+Roll:6
+Name:Balasankaran
+
+=== Code Exited With Errors ===
+----------------------------------------------------------------------------------------------------
 
