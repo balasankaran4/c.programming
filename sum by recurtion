@@ -1,0 +1,25 @@
+#include <stdio.h>
+int ret(int);
+int ans;
+void main()
+{
+  int n;
+  printf ("Enter n:");
+  scanf("%d",&n);
+  ret(n);
+  printf("\nThe sum of the numbeer is :%d",ans);
+}
+ int  ret (int x)
+ {
+  if(x!=0)
+  {
+  ans = x + ret(x-1);
+  }
+  else
+  return 0;
+}
+---------------------------------------------------------------------------------------------------
+Output:
+Enter n:9
+The sum of the number is :45
+---------------------------------------------------------------------------------------------------
