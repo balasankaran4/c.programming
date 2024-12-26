@@ -1,16 +1,60 @@
 //low
-
-
-
-
+// copying the string without using function 
+#include <stdio.h>
+int main()
+{
+char str1[100],str2[100];
+int i=0,j=0;
+    printf("Enter the string without space:");
+     scanf("%s",str1);
+     while (str1[i]!='\0')
+     {
+     str2[j]=str1[i];
+     i++;
+     j++;
+     }
+     printf("\nBefore copying  the string: %s",str1);
+    printf("\nAfter copying the string :%s",str2);
+return 0;
+}
 -----------------------------------------------------------------------------------------
 //medium
-
-
-
+// copying the string without using function 
+#include <stdio.h>
+int main()
+{
+char str1[100],str2[100];
+int i=0,j=0;
+    printf("Enter the string without space:");
+     scanf("%s",str1);
+     while (str1[i]!='\0')
+     {
+     str2[j]=str1[i];
+     i++;
+     j++;
+     }
+     printf("\nBefore copying  the string: %s",str1);
+    printf("\nAfter copying the string :%s",str2);
+return 0;
+}
 -----------------------------------------------------------------------------------------
 //high
-
-
-
+// copying the string without using function 
+#include <stdio.h>
+int main()
+{
+char str1[100],str2[100];
+int i=0,j=0;
+    printf("Enter the string without space:");
+     scanf("%s",str1);
+     while (str1[i]!='\0')
+     {
+     str2[j]=str1[i];
+     i++;
+     j++;
+     }
+     printf("\nBefore copying  the string: %s",str1);
+    printf("\nAfter copying the string :%s",str2);
+return 0;
+}
 -----------------------------------------------------------------------------------------
