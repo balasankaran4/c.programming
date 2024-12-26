@@ -14,6 +14,26 @@
    return 0;
  }
 
+--------------------------------------------------------------------------
+// medium
+// calculate the number of copies published 
+ #include<stdio.h>
+  int main()
+  {
+      int a=50525;
+      int b=40399;
+    printf("number of copies in first edition =%d",a);
+    printf("\nNumber of copies in second edition =%d",b);
+     int sum=a+b;
+      
+      printf("\nThe total number of copies is %d",a+b);
+  
+   return 0;
+  }   
+
+
+
+
 
 
 
