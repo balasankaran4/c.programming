@@ -30,6 +30,30 @@
   
    return 0;
   }   
+--------------------------------------------------------------------------
+//high
+// area and circumference 
+#include<stdio.h>
+int main()
+{
+    int r;
+    float a,c,p=3.14;
+     printf("\n Enter the radius of a circle:");
+     scanf("%d",&r);
+   {
+    a=p*r*r;
+    c=2*p*r;
+      printf("Area of a circle:%f\n",a);
+      printf("Circumference of a circle:%f\n",c);
+   }
+   return 0;
+}
+--------------------------------------------------------------------------
+
+
+
+
+
 
 
 
