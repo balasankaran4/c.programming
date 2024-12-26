@@ -1,16 +1,99 @@
 //low
+// calculate lcm and gcd of two integers 
+#include <stdio.h>
+int main() {
+    int num1, num2, gcd, lcm;
+     int  temp1, temp2, remainder;
+    printf("Enter two integers: ");
+    scanf("%d %d", &num1, &num2);
+    temp1 = num1;
+    temp2 = num2;
+    while (temp2 != 0) {
+        remainder = temp1 % temp2;
+        temp1 = temp2;
+        temp2 = remainder;
+    }
+    gcd = temp1;
+    lcm = (num1 * num2) / gcd;
+    printf("GCD of %d and %d is: %d\n", num1, num2, gcd);
+    printf("LCM of %d and %d is: %d\n", num1, num2, lcm);
 
-
-
-
+    return 0;
+}
 -----------------------------------------------------------------------------------------
 //medium
-
-
-
+#include<stdio.h>
+int main ()
+{
+  int i,j,a[3][3];
+  
+  printf("Enter the element:");
+    for (i=0;i<3;i++)
+    {
+        for(j=0;j<3;j++)
+        {
+            scanf("%d",&a[i][j]);
+           }
+       }
+         printf("\n");
+        for (i=0;i<3;i++)
+    {
+        for(j=0;j<3;j++)
+        {
+            printf("%d ",a[i][j]);
+           }
+           printf("\n");
+       }
+    printf("\n");
+   int a1=a[0][0],a2=a[0][1],a3=a[0][2],b1=a[1][0],b2=a[1][1],b3=a[1][2],c1=a[2][0],c2=a[2][1],c3=a[2][2];
+    int sum1,sum2,sum3,sum;
+    sum1=a1*((b2*c3)-(b3*c2));
+    sum2=b1*((a2*c3)-(a3*c2));
+    sum3=c1*((a2*b3)-(a3*b2)); 
+    sum=sum1-sum2+sum3;
+   
+     printf("%d\n",sum1);
+     printf("%d\n",sum2);
+     printf("%d\n",sum3);
+     printf("%d",sum);
+    return 0;  
+  }
 -----------------------------------------------------------------------------------------
 //high
-
-
-
+#include<stdio.h>
+int main ()
+{
+  int i,j,a[3][3];
+  
+  printf("Enter the element:");
+    for (i=0;i<3;i++)
+    {
+        for(j=0;j<3;j++)
+        {
+            scanf("%d",&a[i][j]);
+           }
+       }
+         printf("\n");
+        for (i=0;i<3;i++)
+    {
+        for(j=0;j<3;j++)
+        {
+            printf("%d ",a[i][j]);
+           }
+           printf("\n");
+       }
+    printf("\n");
+   int a1=a[0][0],a2=a[0][1],a3=a[0][2],b1=a[1][0],b2=a[1][1],b3=a[1][2],c1=a[2][0],c2=a[2][1],c3=a[2][2];
+    int sum1,sum2,sum3,sum;
+    sum1=a1*((b2*c3)-(b3*c2));
+    sum2=b1*((a2*c3)-(a3*c2));
+    sum3=c1*((a2*b3)-(a3*b2)); 
+    sum=sum1-sum2+sum3;
+   
+     printf("%d\n",sum1);
+     printf("%d\n",sum2);
+     printf("%d\n",sum3);
+     printf("%d",sum);
+    return 0;  
+  }
 -----------------------------------------------------------------------------------------
