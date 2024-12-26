@@ -1,0 +1,23 @@
+// low
+// BMI calculation 
+  #include <stdio.h>
+  int main ()
+ {
+  float w, bmi,h;
+    printf ("Enter your weight:");
+    scanf ("%f",&w);
+    printf ("Enter your height:");
+    scanf("%f",&h);
+     bmi=w/(h*h);
+      printf (" bmi value is %f" ,bmi);
+    
+   return 0;
+ }
+
+
+
+
+
+
+
+
