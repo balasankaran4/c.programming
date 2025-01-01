@@ -1,16 +1,78 @@
 //low
+//using the pointer  to print the array 
+#include <stdio.h>
 
-
-
-
+int main ()
+{
+int x[10],n,i;
+  
+  int *prt2=&n;
+  int *prt1=&x[n];
+ printf("Enter the size : ");
+ scanf("%d",&*prt2);
+ 
+ for(i=0;i <*prt2;i++)
+ {
+    printf("x[%d]:",i);
+    scanf("%d",&*(prt1+i));
+ }
+ printf("The elements of the array is :");
+ for(i=0;i <n ;i++)
+ {
+    printf(" %d ",*(prt1+i));
+ }
+ 
+ return 0;
+ }
 -----------------------------------------------------------------------------------------
 //medium
-
-
-
+// swap two numbers using pointer 
+  #include <stdio.h>
+  void swap (int*,int*);
+    void main()
+    {
+       int x,y;
+       int *prt1=&x;
+       int *prt2=&y;
+       printf ("enter ");
+       scanf ("%d %d",&*prt1,&*prt2);
+       printf("before slapping a=%d, b=%d ",*prt1,*prt2);
+       swap(&x,&y);
+       printf("\nafter swapping a=%d, b=%d ",*prt1,*prt2);
+    }
+        void swap (int *a,int *b)
+        {
+          int temp ;
+          temp=*a;
+          *a=*b;
+          *b= temp;
+        }
 -----------------------------------------------------------------------------------------
 //high
-
-
-
+//revers the string using function and pointer 
+#include<stdio.h>
+ void rev();
+ char arr[50];
+ char *prt=arr;
+  
+ void main()
+{
+    char srt[50];
+    char *ptr1=srt;
+    scanf("%s",srt);
+    rev(&*ptr1);
+}
+ void rev(char *prt)
+ {
+    int i=0,count=0;
+    while(*(prt+i)!='\0')
+    {
+     count++;
+     i++;
+    }
+    for(i=count-1;i>=0;i--)
+    {
+      printf("%c",*(prt+i));
+    }
+}
 -----------------------------------------------------------------------------------------
