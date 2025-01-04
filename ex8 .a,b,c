@@ -1,4 +1,5 @@
 //low
+//employee's details in structure 
 #include <stdio.h>
 struct  employee 
 {
