@@ -16,6 +16,7 @@ int main() {
 
 -----------------------------------------------------------------------------------------
 //medium
+enum to print the weekday 
 enum weekdays {
     Monday,
     Tuesday,
