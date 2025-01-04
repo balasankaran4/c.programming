@@ -66,6 +66,29 @@ int main() {
 -----------------------------------------------------------------------------------------
 //high
 
-
+// enum  to printe the direction #include <stdio.h>
+enum direction {
+    NORTH,
+    EAST,
+    SOUTH,
+    WEST
+};
+int main()
+{
+    enum direction heading ;
+    printf ("enter");
+    scanf("%d",(int*)&heading);
+    if (heading == 0)
+        printf("You are heading North\n");
+    else if (heading == 1)
+        printf("You are heading East\n");
+    else if (heading == 2)
+        printf("You are heading South\n");
+    else if (heading == 3)
+        printf("You are heading West\n");
+     else 
+     printf("Invalid input");   
+    return 0;
+}
 
 -----------------------------------------------------------------------------------------
