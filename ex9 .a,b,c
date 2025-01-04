@@ -1,6 +1,17 @@
 //low
+//bit field to store age 
+#include <stdio.h>
 
+struct Person {
+    unsigned int age : 7; 
+};
 
+int main() {
+    struct Person p1;
+    p1.age = 25;  
+    printf("Age: %u\n", p1.age);
+    return 0;
+}
 
 
 -----------------------------------------------------------------------------------------
