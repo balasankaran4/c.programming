@@ -19,42 +19,48 @@ return 0;
 }
 -----------------------------------------------------------------------------------------
 //medium
-// copying the string without using function 
+//convert a string to uppercase
 #include <stdio.h>
-int main()
+int main() 
 {
-char str1[100],str2[100];
-int i=0,j=0;
-    printf("Enter the string without space:");
-     scanf("%s",str1);
-     while (str1[i]!='\0')
-     {
-     str2[j]=str1[i];
-     i++;
-     j++;
-     }
-     printf("\nBefore copying  the string: %s",str1);
-    printf("\nAfter copying the string :%s",str2);
-return 0;
+    char low[100],up[100]; 
+    int i=0,j=0;
+    printf("Enter string in lowercase:"); 
+    scanf("%s",low); 
+    while (low[i]!='\0')
+    {
+        up[j]=low[i]-32; 
+        i++,j++; 
+        
+    } 
+    printf("\n The given string :%s",low);
+    printf("\nThe converted string:%s",up); 
+    return 0; 
 }
+
 -----------------------------------------------------------------------------------------
 //high
-// copying the string without using function 
-#include <stdio.h>
-int main()
+ // Index of the given char
+#include<stdio.h>
+int  main ()
 {
-char str1[100],str2[100];
-int i=0,j=0;
-    printf("Enter the string without space:");
-     scanf("%s",str1);
-     while (str1[i]!='\0')
-     {
-     str2[j]=str1[i];
+char str[50],ch;
+printf("ebnte ch");
+scanf(" %c",&ch);
+printf("Enter the string without space ");
+scanf("%s",str);
+int i=0;
+while(str[i]!='\0')
+{
+    if(str[i]==ch)
+    {
+        printf("\nthe index is %d",i);
+        break;
+    }
+    else
      i++;
-     j++;
-     }
-     printf("\nBefore copying  the string: %s",str1);
-    printf("\nAfter copying the string :%s",str2);
-return 0;
 }
+    return 0;
+ }
+
 -----------------------------------------------------------------------------------------
