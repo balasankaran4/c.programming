@@ -69,6 +69,7 @@ struct  time
   }
 -----------------------------------------------------------------------------------------
 //high
+//print the students detail using function 
 #include <stdio.h>
 struct student  
 {
