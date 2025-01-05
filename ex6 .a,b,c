@@ -1,5 +1,5 @@
 //low
- // with retuntype and parameter
+ // factorial of number using function
   #include <stdio.h>
   int rect(int);
    int fact=1; 
@@ -21,7 +21,7 @@
   } 
 -----------------------------------------------------------------------------------------
 //medium
-//function quare of the elements in thwe array 
+//square the elements in the array using function 
   #include<stdio.h>
   void ret();
   int i,arr[10],squ[10],n;
