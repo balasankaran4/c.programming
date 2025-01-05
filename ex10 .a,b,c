@@ -1,15 +1,35 @@
 //low
-
-
-
-
+//creat and store the information in file
+#include <stdio.h>
+#include <stdlib.h>
+int main() 
+{
+  FILE *file;
+  file = fopen("info.txt","w");
+  if (file == NULL)
+ {
+   printf("Error opening source file\n");
+   return 1;  
+ }
+  char name[50];
+  int age;
+  char address[100];
+  printf("Enter your name: ");
+  fgets(name, sizeof(name), stdin);  
+  printf("Enter your age: ");
+  scanf("%d", &age);
+  getchar(); 
+  printf("Enter your address: ");
+  fgets(address, sizeof(address), stdin);
+  fprintf(file, "Name: %s", name);
+  fprintf(file, "Age: %d\n", age);
+  fprintf(file, "Address: %s", address);
+  fclose(file);
+  printf("Information has been written to the file\n");
+ return 0;
+}
 -----------------------------------------------------------------------------------------
 //medium
-
-
-
------------------------------------------------------------------------------------------
-//high
 
 
 
