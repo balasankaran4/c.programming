@@ -1,36 +1,54 @@
 //low
-//creat and store the information in file
+//In c to read an existing file
 #include <stdio.h>
-#include <stdlib.h>
-int main() 
-{
-  FILE *file;
-  file = fopen("info.txt","w");
-  if (file == NULL)
- {
-   printf("Error opening source file\n");
-   return 1;  
- }
-  char name[50];
-  int age;
-  char address[100];
-  printf("Enter your name: ");
-  fgets(name, sizeof(name), stdin);  
-  printf("Enter your age: ");
-  scanf("%d", &age);
-  getchar(); 
-  printf("Enter your address: ");
-  fgets(address, sizeof(address), stdin);
-  fprintf(file, "Name: %s", name);
-  fprintf(file, "Age: %d\n", age);
-  fprintf(file, "Address: %s", address);
-  fclose(file);
-  printf("Information has been written to the file\n");
- return 0;
+int main() {
+    FILE *file;
+    char ch;
+    file = fopen("example.txt", "r");
+    if (file == NULL) {
+        printf("copy file\n");
+        return 1;
+    }
+    printf("Contents of the file are:\n");
+    while ((ch = fgetc(file)) != EOF) {
+        putchar(ch); 
+}
+    fclose(file);
+    return 0;
 }
 -----------------------------------------------------------------------------------------
 //medium
-
-
-
+//copy the data of file 1 to file 2
+#include <stdio.h>
+int main() {
+    FILE *sourceFile, *destFile;
+    char ch;
+    sourceFile = fopen("file1.txt", "r");
+    if (sourceFile == NULL) {
+        printf("Error opening source file.\n");
+        return 1;
+    }
+    destFile = fopen("file2.txt", "w");
+    if (destFile == NULL) {
+        printf("Error opening destination file.\n");
+        fclose(sourceFile); 
+        return 1;
+    }
+    while ((ch = fgetc(sourceFile)) != EOF) {
+        fputc(ch, destFile);
+    }
+    fclose(sourceFile);
+    fclose(destFile);
+    destFile = fopen("file2.txt", "r");
+    if (destFile == NULL) {
+        printf("Error opening destination file to display content.\n");
+        return 1;
+    }
+    printf("Contents of file2.txt:\n");
+    while ((ch = fgetc(destFile)) != EOF) {
+        putchar(ch);
+    }
+    fclose(destFile);
+    return 0;
+}
 -----------------------------------------------------------------------------------------
