@@ -1,0 +1,76 @@
+// enum to printe the direction 
+#include <stdio.h>
+#define ELECTRON_CHARGE 1.602e-19 
+#define SPEED_OF_LIGHT 3.0e8 
+#define LAMBDA_RED 6443e-10
+ #define LAMBDA_GREEN 5735e-10
+ #define LAMBDA_BLUE 4945e-10 
+ #define PI 3.14 
+ enum formula { hall, plank, fiber_optics };
+  int main()
+   { 
+     printf("BALASANKARAN.B-(B.tech CSBS) FOP-PROJECT\n");
+      enum formula f1 ; 
+      printf ("Enter\n0 for Hall coefficient\n1 for Plank's constant\n2 for Acceptance angle\n= ");
+       scanf("%d",(int*)&f1);
+        printf("Give the input like eg:for 3x10\u00B3 to give =>3e3\n");
+         if (f1 == 0) 
+         { 
+          printf("To Calculate The Hall Coefficient\n"); 
+          float v,i,a,r; 
+          double t=0.05/3000; 
+          printf("\nEnter the value of hall voltage V:");
+          scanf("%f",&v); 
+          printf("\nEnter the value of current through the crystel: ");
+          scanf("%f",&i); 
+          a=v/i;
+          r=a*t; 
+          printf("\nHall coefficient R=%fx10\u2078 cm\u00B3 c\u00B9",r); 
+         } 
+         else if (f1 == 1)
+          { 
+            double v1,v2,v3,h1,h2,h3,aver; 
+            printf("\nCalculation for verifying Planck`s Constant");
+            printf("\nEnter the stopping potential V1 (in volts): "); 
+            scanf("%lf",&v1); 
+            printf("\nEnter the stopping potential V2 (in volts): "); 
+            scanf("%lf",&v2); 
+            printf("\nEnter the stopping potential V3 (in volts): ");
+            scanf("%lf",&v3);
+            h1=(ELECTRON_CHARGE * (v2 - v1) * LAMBDA_RED * LAMBDA_GREEN ) / (SPEED_OF_LIGHT * (LAMBDA_RED - LAMBDA_GREEN)); 
+            h2=(ELECTRON_CHARGE * (v3 - v2) * LAMBDA_GREEN * LAMBDA_BLUE ) / (SPEED_OF_LIGHT * (LAMBDA_GREEN - LAMBDA_BLUE)); 
+            h3=(ELECTRON_CHARGE * (v3 - v1) * LAMBDA_RED * LAMBDA_BLUE ) / (SPEED_OF_LIGHT * (LAMBDA_RED - LAMBDA_BLUE)); 
+           printf("\nCalculated Planck's constant (h1): %.3e JÂ·s\n", h1);
+           printf("\nCalculated Planck's constant (h2): %.3e JÂ·s\n", h2); 
+           printf("\nCalculated Planck's constant (h3): %.3e JÂ·s\n", h3); 
+           aver = (h1+h2+h3)/3; 
+           printf("\nStandard value of planck's constan = 6.62e-34 J.S\n");
+           printf("\nObserve value of planck's constan = %.3e J.s\n",aver); 
+          } 
+          else if (f1 == 2) 
+          { 
+            double r,d, theta,i,sum=0,mean; 
+            int n;
+            printf("Calculation for acceptance angle of the optical fiper"); 
+            printf("\nHow many readings are you have:"); 
+            scanf("%d",&n);
+              for(i=1;i<=n;i++)
+               { 
+                printf("\nEnter the value of R :");
+                scanf("%lf", &r); 
+                printf("\nEnter the value of D :"); 
+                scanf("%lf", &d); theta = (r / d) * (180 / PI);
+                printf("\nTheta= %lf degree\n",theta);
+                 sum=sum+theta; 
+               }
+                 printf("\n"); 
+                 mean=sum/n; 
+                 printf("\nAcceptance angle of the optical fiber cable = %lf\n",mean); 
+          } 
+           else
+              {
+                printf("Invalid input"); 
+              } 
+             printf("\n-------------Thank you for using--------------");
+         return 0; 
+   }
